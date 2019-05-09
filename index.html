@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl"> 
+
+<table class="table table-striped">
+  <thead>
+	<tr>
+    <th scope="col">userId</th>
+    <th scope="col">id</th>
+    <th scope="col">Title</th>
+    <th scope="col">Body</th>
+    </tr>
+  </thead>
+  <tr ng-repeat="x in myTable">
+  <td>{{x.userId}}</td>
+   <td>{{x.id}}</td>
+    <td>{{x.title}}</td>
+     <td>{{x.body}}</td>
+  </tr>
+  </table>
+
+</div>
+
+
+<script src="./webcontent/js/fileassignment.js"></script>
+
+
+
+</body>
+
+</html>
