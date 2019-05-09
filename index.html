@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl"> 
+
+<p>Today's welcome message is:</p>
+
+<table>
+	<tr>
+    <th>userId</th>
+    <th>id</th>
+    <th>Title</th>
+    <th>Body</th>
+    </tr>
+  <tr ng-repeat="x in myWelcome">
+  <td>{{x.userId}}</td>
+   <td>{{x.id}}</td>
+    <td>{{x.title}}</td>
+     <td>{{x.body}}</td>
+  </tr>
+  </table>
+
+</div>
+
+
+<script src="./webcontent/js/fileassignment.js"></script>
+
+
+
+</body>
+
+</html>
