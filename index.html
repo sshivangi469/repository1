@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./webcontent/stylesheets/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="./webcontent/js/fileassignment.js"></script>
+</head>
+
+<body>
+  <div id="posts">
+    <h2>Posts</h2>
+  </div>
+
+  <div  ng-app="myApp" ng-controller="myCtrl"> 
+      <div class="tab" ng-hide="hideData">
+        <table id="table" class="table-striped"   >
+           <thead>
+	           <tr>
+                <th id="h1">UserId</th>
+                <th id="h1">id</th>
+                <th>Title</th>
+                <th>Body</th>
+              </tr>
+            </thead>
+              <tr ng-repeat="post in arr">
+                <td class="td1">{{post.userId}}</td>
+                <td class= "td1"><a href="#" ng-click="myFun(post)">{{post.id}}</a></td>
+                <td class= "td1">{{post.title}}</td>
+                <td class= "td1">{{post.body}}</td>
+              </tr>
+        </table>
+      <div class="text-right"> 
+         <button ng-click="previous()">Previous</button>
+        <button ng-click="next()">Next</button>
+      </div>
+    </div>
+ 
+    <div  class="tab" ng-show="showData">
+       <table class="table-striped">
+          <thead>
+            <tr>
+              <th id="h1">UserId</th>
+              <th id="h1">id</th>
+              <th>Title</th>
+              <th>Body</th>
+            </tr>
+          </thead>
+            <tr>
+              <td>{{posts.userId}}</td>
+              <td>{{posts.id}}</td>
+              <td>{{posts.title}}</td>
+              <td>{{posts.body}}</td>
+            </tr>
+        </table>
+        <div id="btn"><button ng-click="goBack()">Back</button></div>
+    </div>
+    
+  </div>
+</body>
+
+</html>
